@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Global Rules File -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Header File -->
+    <link rel="stylesheet" href="css/header.css">
+    <!-- FrameWork File -->
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Cairo Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <%- include ('partials/header.ejs') %>
+    <!-- Start Contact -->
+    <div class="contact-details">
+        <div class="container">
+            <div class="info">
+                <h2 class="h1 heading">تواصل معنا</h2>
+                <p>لأية استفسارات ، أو لمجرد إلقاء التحية ، تواصل معنا</p>
+                <h2 class="heading-point">العنوان</h2>
+                <p>المملكة العربية السعودية, الرياض</p>
+                <div class="contact-info">
+                    <div class="email">
+                        <h2 class="heading-point">البريد الالكتروني</h2>
+                        <p>info@alwesamalmasry.com</p>
+                    </div>
+                    <div class="phone">
+                        <h2 class="heading-point">ارقام التواصل</h2>
+                        <p>056 525 8902</p>
+                        <p>054 021 3290</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <img src="images/map.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="contact-form">
+        <div class="container">
+            <form action="/send" method="post" novalidate>
+                <input type="text" placeholder="الاسم الاول" class="firstName" name="firstName">
+                <input type="text" placeholder="الاسم الثاني" class="lastName" name="lastName">
+                <input type="text" placeholder="البريد الالكتروني" class="email" name="email">
+                <input type="text" placeholder="موضوع الرسالة"  class="subject" name="subject">
+                <textarea placeholder="الرسالة" id="" cols="30" class="message" name="message" rows="10"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact -->
+    <%- include ('partials/footer.ejs') %>
+    <!-- Jquery Cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Main Js File -->
+    <!-- <script src="js/header.js"></script> -->
+</body>
+</html>

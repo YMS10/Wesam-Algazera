@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <!-- Material Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/messages.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Aside Start -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/images/logo.png">
+                    <!-- <h2>EGA<span class="danger">TOR</span></h2> -->
+                    <h2>وسام الجزيرة</h2>
+                </div>
+                <div id="close_btn" class="close">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="/admin/create">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>انشاء المشاريع</h3>
+                </a>
+                <a href="/admin/delete">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>مسح المشاريع</h3>
+                </a>
+                <a href="/admin/update">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>تحديث المشاريع</h3>
+                </a>
+                <a href="/admin/messages">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3>الرسائل</h3>
+                    <!-- <span class="message-count">26</span> -->
+                </a>
+        </div>
+        </aside>
+        <!-- Aside End -->
+        
+        <!-- Start Main -->
+        <!-- End of Main -->
+
+        <div class="right">
+            <!-- Top Start -->
+            <div class="top"  style="left: 0;position: absolute;">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>اهلا, <b>محمد جمعة</b></p>
+                        <small class="text-muted">المدير</small>
+                    </div>
+                    <div class="profile_photo">
+                        <img src="/images/profile-1.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- Top End -->
+            <div class="messages-div">
+                <% messages.forEach((message) => { %>
+                    <div class="message">
+                        <h2><%= message.firstName %> <%= message.lastName %></h2>
+                        <h3><%= message.Email %></h3>
+                        <h3><%= message.Subject %></h3>
+                        <p><%= message.Message %></p>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.tiny.cloud/1/ok1uaamjmvyh5rop7cnvmhjlb8imb090e5ih1oyel0g4amci/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- <script src="https://cdn.tiny.cloud/1/ok1uaamjmvyh5rop7cnvmhjlb8imb090e5ih1oyel0g4amci/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
+<script src="/js/admin.js"></script>
+<script>
+
+tinymce.init({
+  selector: 'textarea',
+  plugins: [
+    'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'prewiew', 'anchor', 'pagebreak', 'searchreplace', 'wordcount', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media', 'table', 'emoticons', 'template', 'codesample'
+  ],
+  toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright alignjustify |' +  'bullist numlist outdent indent | link image | print preview media fullscreen |' + 'forcecolor backcolor emoticons',
+  menu: {
+    favs: {title: 'menu', items: 'code visualaid | searchreplace | emoticons'},
+  },
+  menubar: 'favs file edit view insert format tools table',
+  content_style: 'body{font-family: Helvetica,Arial,sans-serif; font-size: 16px}',
+  statusbar: false,
+  height: 300
+});
+</script>
+</body>
+</html>

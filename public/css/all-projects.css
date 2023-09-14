@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+/* Start Variables */
+:root{
+    --main-color: #0A6836;
+}
+/* End Variables */
+body{
+    font-family: 'Rubik', sans-serif;
+}
+.header-img{
+    width: 100%;
+    height: 400px;
+}
+/* Start All Projects Session */
+.all-projects .h1{
+    color: var(--main-color);
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.all-projects .info{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    row-gap: 30px;
+}
+.all-projects .info img{
+    width: 100%;
+}
+.all-projects .info .project{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    /* margin-top: 15px; */
+}
+  
+.all-projects .info .project .image-overlay {
+    position: relative;
+    display: inline-block;
+}
+
+.all-projects .info .project .image-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+  
+.all-projects .info .project .image-overlay:hover::before {
+    opacity: 1;
+}
+  
+.all-projects .info .project .image-overlay .text-overlay {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-35%, -50%);
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+  
+.all-projects .info .project .image-overlay:hover .text-overlay {
+    opacity: 1;
+}
+
+.all-projects .info .project .text-overlay span{
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.all-projects .info .project .text-overlay h3{
+    color: var(--main-color);
+    margin: 0;
+}
+.all-projects .info .project .text-overlay .more-info{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.all-projects .info .project .text-overlay .more-info h6{
+    color: white;
+    margin-right: 10px;
+}
+.all-projects .info .project .text-overlay .more-info a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.all-projects .info .project .text-overlay .more-info a button, .all-projects .info .project .text-overlay .more-info h6{
+    margin: 5px 5px;
+}
+.all-projects .info .project .text-overlay .more-info button{
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 16px;
+}
+
+@media (max-width: 767px){
+    .all-projects .h1{
+        position: relative;
+        top: 0;
+        padding: 0;
+        margin: 90px 0 0 0;
+        font-size: 50px;
+        margin-bottom: 20px !important;
+    }
+    /* .projects .info .project .image-overlay .text-overlay{
+
+    } */
+    .all-projects .info .project .text-overlay span{font-size: 14px;}
+    .all-projects .info .project .text-overlay h3{font-size: 26px;}
+    .all-projects .info .project .text-overlay .more-info h6{font-size: 14px;}
+    .all-projects .info .project .text-overlay .more-info button{padding: 14px 20px;}
+}
+@media (min-width: 657px) and (max-width: 767px) {
+    .all-projects .info .project .image-overlay .text-overlay{
+        top: 65%;
+        left: 35%;
+    }
+    .all-projects .info .project .text-overlay span{font-size: 12px;}
+    .all-projects .info .project .text-overlay h3{font-size: 22px;}
+    .all-projects .info .project .text-overlay .more-info h6{font-size: 12px;}
+    .all-projects .info .project .text-overlay .more-info button{padding: 12px 18px;}
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .all-projects .h1{
+        position: relative;
+        top: 0;
+        padding: 0;
+        margin: 90px 0 0 0;
+        margin-bottom: 20px !important;
+        font-size: 60px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1190px){
+    .all-projects .h1{
+        position: relative;
+        top: 0;
+        padding: 0;
+        margin: 90px 0 0 0;
+        margin-bottom: 20px !important;
+        font-size: 70px;
+    }
+}
+/* End All Projects Section */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <form action="/create" method="post" enctype="multipart/form-data" novalidate>
+        <input type="file" name="image" placeholder="Select Project Img: " >
+        <br>
+        <br>
+        <input type="text" name="title" placeholder="Enter Project Title: ">
+        <p id="characterCount"></p>
+        <br>
+        <br>
+        <textarea name="desc" id="" cols="30" rows="10" class="tinymce" required></textarea>
+        <br>
+        <br>
+        <textarea name="projectDesc" id="" cols="30" rows="10" class="tinymce" required></textarea>
+        <br>
+        <br>
+        <textarea name="feat" id="" cols="30" rows="10" class="tinymce" required></textarea>
+        <br>
+        <br>
+        <textarea name="projectFeat" id="" cols="30" rows="10" class="tinymce" required></textarea>
+        <br>
+        <br>
+        <textarea name="finaIndic" id="" cols="30" rows="10" class="tinymce" required></textarea>
+        <br>
+        <br>
+        <textarea name="study" id="" cols="30" rows="10" class="tinymce" required></textarea>
+        <br>
+        <br>
+        <textarea name="country" id="" cols="30" rows="10" class="tinymce" required></textarea>
+        <br>
+        <br>
+        <button type="submit">Create Project</button>
+        <br>
+        <br>
+    </form>
+
+<script src="https://cdn.tiny.cloud/1/ok1uaamjmvyh5rop7cnvmhjlb8imb090e5ih1oyel0g4amci/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+
+tinymce.init({
+  selector: 'textarea',
+  plugins: [
+    'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'prewiew', 'anchor', 'pagebreak', 'searchreplace', 'wordcount', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media', 'table', 'emoticons', 'template', 'codesample'
+  ],
+  toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright alignjustify |' +  'bullist numlist outdent indent | link image | print preview media fullscreen |' + 'forcecolor backcolor emoticons',
+  menu: {
+    favs: {title: 'menu', items: 'code visualaid | searchreplace | emoticons'},
+  },
+  menubar: 'favs file edit view insert format tools table',
+  content_style: 'body{font-family: Helvetica,Arial,sans-serif; font-size: 16px}',
+  statusbar: false,
+  height: 300
+});
+</script>
+</body>
+</html>

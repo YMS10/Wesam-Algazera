@@ -1,0 +1,27 @@
+/* Start Framework */
+.block{
+    display: block !important;
+}
+.classic-list{
+    list-style: none;
+    padding: 0;
+}
+.classic-list li{
+    padding-left: 25px;
+}
+.special-heading {
+    font-size: 120px;
+    color: white;
+    margin: 0;
+    padding: 60px 0 0 0;
+    text-shadow: -1px -1px 0 #E1E2E3, 1px -1px 0 #E1E2E3, -1px 1px 0 #E1E2E3, 1px 1px 0 #E1E2E3;
+}
+.read-button{
+    background-color: #0A6836;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 160px;
+    margin-top: 20px;
+}
+/* End Framework */

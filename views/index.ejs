@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesam Algazera</title>
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Global Rules File -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Header File -->
+    <link rel="stylesheet" href="css/header.css">
+    <!-- FrameWork File -->
+    <link rel="stylesheet" href="css/framework.css">
+    <!-- Google Fonts -->
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900" rel="stylesheet">
+</head>
+<body>
+    <%- include ('partials/header.ejs') %>
+    <!-- Start carousel -->
+    <div class="carousel" id="carousel">
+        <div class="container">
+            <div class="carousel-slide active" id="slide-1">
+                <img src="images/carousel 01.jpg" alt="">
+            </div>
+            <div class="carousel-slide" id="slide-2"><img src="images/carousel 02.jpg" alt=""></div>
+            <div class="carousel-slide" id="slide-3"><img src="images/carousel 03.jpg" alt=""></div>
+            <img src="images/left-arrow.png" class="next"  alt="">
+            <img src="images/right-arrow.png" class="prev" alt="">
+        </div>
+    </div>
+    <!-- End carousel -->
+    <!-- Start About -->
+    <div class="about">
+        <div class="container">
+            <h2 class="special-heading">Wesam Algazera</h2>
+            <div class="info">
+                <h2 class="h1">ABOUT US</h2>
+                <p>Al Bawani is a diversified group of Saudi companies. Established in 1991, the past three decades have seen our business grow from a modest civil-works firm into a fully ledged general contracting corporation with a sizable portfolio, strong financial position, and a significant presence in a broad range of industries. Indeed, our construction division is now among the five largest operators in the country. What’s more, our unwavering focus on excellence has earned us a Class-1 business ranking in Saudi Arabia.</p>
+                <a href="/about-us">
+                    <button class="read-button">Read More</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+    <!-- Start Project Manage -->
+    <div class="project-manage">
+        <div class="container">
+            <div class="image">
+                <img src="images/project-manage.png" alt="">
+            </div>
+            <div class="info">
+                <span>Explore The Features</span>
+                <h2>Visibility Studies</h2>
+                <p>We provide our services in the field of feasibility studies, which include preparing economic and technical feasibility studies for new projects, using financial analysis tools, statistics, and modern technologies, to provide a comprehensive and accurate assessment of the projects’ feasibility.</p>
+                <a href="/feasibility-studies">
+                    <button class="read-button">Read More</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Project Manage -->
+    <!-- Start Projects -->
+    <div class="projects">
+        <div class="container">
+            <h2 class="special-heading">PROJECTS</h2>
+            <h2 class="h1">PROJECTS</h2>
+            <div class="info">
+                <% projects.forEach((project) => { %>
+                    <div class="project">
+                        <div class="image-overlay">
+                            <img src="data:image/jpeg;base64,<%= project.image %>" style="width: 373px; height: 248px;" alt="">
+                            <div class="text-overlay">
+                                <!-- <span>Construction / Culture</span> -->
+                                <h3><%= project.title %></h3>
+                                <div class="more-info">
+                                    <a href="/project/<%= project._id %>"> <!-- Add this link -->
+                                        <h6>Find Out More</h6>
+                                        <button>+</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Projects -->
+    <!-- Start Certificates -->
+    <div class="certificates">
+        <div class="container">
+            <h2 class="special-heading">ISO CERTIFIED</h2>
+            <h2 class="h1">CERTIFICATES</h2>
+        </div>
+        <div class="certficates-all">
+            <div class="container">
+                <div class="image">
+                    <img src="images/cert.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="controls">
+                        <button class="accordion">ISO 9001:2015</button>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="panel">
+                        <p>We demonstrate our ability to consistently provide services that meet customer and applicable statutory and regulatory requirements and to enhance customer satisfaction through the effective application of the system, including processes for improvement of the system and the assurance of conformity to customer and applicable statutory and regulatory requirements.</p>
+                    </div>
+                    
+                    <div class="controls">
+                        <button class="accordion">ISO 9001:2015</button>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="panel">
+                        <p>ISO 14001:2015 specifies the requirements for an environmental management system that Albawani can use to enhance its environmental performance.</p>
+                    </div>
+                    
+                    <div class="controls">
+                        <button class="accordion">ISO 9001:2015</button>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="panel">
+                        <p>Certification to OHSAS 45001 show the commitment to the health and safety of employees, demonstrates our ability to manage risk & hazards associated with the activities and provide assurance to all concerned including customers and management that legal compliance is effectively managed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- End Certificates -->
+    <!-- Start Our Parteners -->
+    <div class="partners">
+        <div class="container">
+            <h4>We Trust On Them</h4>
+            <h2>Our Partners</h2>
+            <div class="info">
+                <img src="images/Microsoft.svg" alt="">
+                <img src="images/Lenovo.png" alt="">
+                <img src="images/Sony.png" alt="">
+                <img src="images/Dynamics.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End Our Parteners -->
+    <%- include ('partials/footer.ejs') %>
+    <!-- Jquery Cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Main Js File -->
+    <script src="js/main.js"></script>
+    <!-- <script src="js/header.js"></script> -->
+</body>
+</html>

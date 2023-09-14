@@ -1,0 +1,10 @@
+.messages-div{
+    margin-top: 83px;
+}
+.messages-div .message{
+    margin: 50px 50px;
+}
+.messages-div .message > *{
+    /* color: black; */
+    margin: 10px;
+}

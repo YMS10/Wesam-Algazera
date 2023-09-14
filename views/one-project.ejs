@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Consultancy</title>
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="/css/one-project.css">
+    <!-- Normalize File -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/framework.css">
+    <!-- Cairo Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <%- include ('partials/header.ejs') %>
+    <!-- Jquery Cdn -->
+    <!-- Main Js File -->
+    <div class="project-show">
+        <div class="container">
+            <div class="image">
+                <img src="data:image/jpeg;base64,<%= project.image %>" alt="">
+            </div>
+            <div class="info">
+                <h2><%= project.title %></h2>
+                <p><%- project.description %></p>
+            </div>
+        </div>
+    </div>
+    <div class="information">
+        <div class="container">
+            <!-- <h2 class="h1 text-center">معلومات المشروع</h2> -->
+            <ul class="classic-list info-list">
+                <li data-class="project-desc" class="selected">وصف المشروع</li>
+                <li data-class="features">الخدمات</li>
+                <li data-class="projectFeatures">مميزات المشروع</li>
+                <li data-class="financialIndicators">المؤشرات المالية</li>
+                <li data-class="studyContent">محتوى الدراسة</li>
+                <li data-class="Country">الدولة</li>
+            </ul>
+            <div class="info-content">
+                <div class="project-desc"><%- project.projectDesc %></div>
+                <div class="features"><%- project.Features %></div>
+                <div class="projectFeatures"><%- project.projectFeatures %></div>
+                <div class="financialIndicators"><%- project.financialIndicators %></div>
+                <div class="studyContent"><%- project.studyContent %></div>
+                <div class="Country"><%- project.Country %></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <%- include ('partials/footer.ejs') %>
+    <script>
+        /*global $ */
+        $(function () {
+            'use strict';
+            $('.info-list li').click(function (){
+                $(this).addClass('selected').siblings('li').removeClass('selected');
+                $('.info-content div').hide()
+                $('.' + $(this).data('class')).fadeIn()
+            })
+        })
+    </script>
+</body>
+</html>
