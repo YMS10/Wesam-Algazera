@@ -13,8 +13,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: false}))
 
-
-mongoose.connect('mongodb://127.0.0.1:27017/wesam_algazera', {
+// mongoose.connect('mongodb+srv://youssefmohammed2342:xebnWBjezofCCZrZ@wesam-algazera.z1c7t0p.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://admin:mada203040@wesam-algazera.z1c7t0p.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
