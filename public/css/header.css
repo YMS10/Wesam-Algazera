@@ -43,7 +43,7 @@ header .links .all-links{
     padding: 0;
     background-color: #f6f6f6;
     position: absolute;
-    right: 0;
+    left: 0;
     min-width: 200px;
     top: calc(100% + 15px);
     display: none;
@@ -55,7 +55,7 @@ header .links .all-links::before{
     border-style: solid;
     border-color: transparent transparent #f6f6f6 transparent;
     position: absolute;
-    right: 5px;
+    left: 5px;
     top: -20px;
 }
 header .links .all-links li a{
@@ -66,7 +66,7 @@ header .links .all-links li a{
     transition: 0.3s;
 }
 header .links .all-links li a:hover{
-    padding-left: 25px;
+    padding-right: 20px;
 }
 header .links .all-links li:not(:last-child) a{
     border-bottom: 1px solid #DDD;

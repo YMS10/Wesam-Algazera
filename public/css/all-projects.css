@@ -20,6 +20,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 10px;
     row-gap: 30px;
+    direction: ltr;
 }
 .all-projects .info img{
     width: 100%;

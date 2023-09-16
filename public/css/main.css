@@ -164,6 +164,9 @@
   }
 /* End Project Manage */
 /* Start Projects Section */
+.projects .info{
+    direction: ltr;
+}
 .projects .h1{
     color: var(--main-color);
     font-size: 80px;
