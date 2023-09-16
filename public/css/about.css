@@ -63,3 +63,10 @@
     width: 100%;
 }
 /* End MVC Session */
+@media (max-width: 768px) {
+    .about .container {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+}

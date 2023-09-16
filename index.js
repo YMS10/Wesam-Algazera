@@ -189,6 +189,7 @@ app.post('/update', upload.single('image'), (req, res) => {
 });
 
 app.post('/create', upload.single('image'), (req, res) => {
+  
   const data = fs.readFileSync(req.file.path);
   const imageBuffer = Buffer.from(data);
 
