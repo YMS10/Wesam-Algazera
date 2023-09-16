@@ -6,7 +6,7 @@
 }
 /* End Variables */
 body{
-    font-family: 'Cairo', sans-serif;
+    /* font-family: 'Cairo', sans-serif; */
     /* text-align: right; */
 }
 .service{
@@ -18,6 +18,11 @@ body{
     gap: 30px;
 }
 .service .container .bottom{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.service .container .small-services{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
@@ -43,4 +48,8 @@ p{
     font-weight: 400;
     line-height: 20.7px;
     color: rgb(122, 122, 122);
+}
+.small-heading{
+    /* color: #0A6836; */
+    font-size: 22px;
 }

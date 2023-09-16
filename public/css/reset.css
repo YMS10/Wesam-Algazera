@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900;1000&display=swap');
 /* Start Global Rules */
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-body{
+/* body{
     font-family: 'Montserrat', sans-serif;
-    /* height: 5000px; */
+    /* height: 5000px
+} */
+*{
+    font-family: 'Cairo', sans-serif;
 }
-
 .container{
     padding-left: 15px;
     padding-right: 15px;

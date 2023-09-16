@@ -54,7 +54,7 @@
     position: absolute;
     /* bottom: -50px; */
     font-weight: 500;
-    top: 820px;
+    top: 780px;
 }
 .about .info p{
     color: #B0B2B9;
@@ -171,7 +171,7 @@
     padding: 0 50px;
     /* bottom: -50px; */
     font-weight: 500;
-    top: 1840px;
+    top: 1720px;
 }
 .projects .special-heading{
     margin-bottom: 40px;
@@ -320,7 +320,7 @@
     padding: 0 50px;
     /* bottom: -50px; */
     font-weight: 500;
-    top: 2340px;
+    top: 2220px;
 }
 .certficates-all{
     background-color: #F2F3F5;
