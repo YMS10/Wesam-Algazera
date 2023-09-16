@@ -9,8 +9,18 @@ body{
     font-family: 'Cairo', sans-serif;
     /* text-align: right; */
 }
-.market-cons{
+.service{
     direction: rtl;
+}
+.service .container .top{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 30px;
+}
+.service .container .bottom{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
 }
 .header-img{
     width: 100%;
